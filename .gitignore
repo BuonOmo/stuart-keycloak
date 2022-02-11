@@ -2,3 +2,4 @@
 .DS_Store
 *.config*
 init_config/.current
+.client_secrets.env
