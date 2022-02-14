@@ -23,7 +23,7 @@ services:
     networks:
       - dev
 
-  keycloak:
+  keycloak: &keycloak
     image: quay.io/keycloak/keycloak:latest
     environment:
       DB_VENDOR: MYSQL
@@ -60,3 +60,27 @@ services:
     networks:
       - dev
 
+  keycloak-init: &keycloak-init
+    << : *keycloak
+    profiles:
+      - init
+    image: quay.io/keycloak/keycloak:9.0.3
+    environment:
+      JDBC_PARAMS: "useSSL=false"
+      KEYCLOAK_IMPORT: "/init_config/.current/realm-export-base.json"
+    command: "-Dkeycloak.profile.feature.scripts=enabled -Dkeycloak.profile.feature.upload_scripts=enabled"
+    volumes:
+      - "./init_config:/init_config"
+    depends_on:
+      - mysql
+    networks:
+      - dev
+
+  keycloak-cli:
+    << : *keycloak-init
+    profiles:
+      - cli
+    entrypoint: /opt/jboss/keycloak/bin/kcadm.sh
+    volumes:
+      - "./init_config:/init_config"
+      - "./.config_cli:/opt/jboss/.keycloak"
