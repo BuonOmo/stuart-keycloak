@@ -44,6 +44,8 @@ services:
     profiles:
       - config
     image: adorsys/keycloak-config-cli:latest
+    env_file:
+      - .client_secrets.env
     environment:
       KEYCLOAK_URL: http://keycloak:8080/auth
       KEYCLOAK_USER: ${KEYCLOAK_USER-admin}
@@ -53,6 +55,9 @@ services:
       IMPORT_PATH: /keycloak_config
       IMPORT_FORCE: ${IMPORT_FORCE-false}
       DEBUG: ${DEBUG-false}
+      IMPORT_VARSUBSTITUTION: 1
+      IMPORT_VARSUBSTITUTION_IN_VARIABLES: 1
+      IMPORT_VARSUBSTITUTION_UNDEFINED_THROWS_EXCEPTIONS: 1
     volumes:
       - "./keycloak_config:/keycloak_config"
     depends_on:
