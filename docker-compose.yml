@@ -24,7 +24,7 @@ services:
 
   keycloak: &keycloak
     image: quay.io/keycloak/keycloak:latest
-    environment:
+    environment: &keycloak-enviroment
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
       DB_DATABASE: ${DB_NAME-keycloak}
@@ -65,6 +65,7 @@ services:
       - init
     image: quay.io/keycloak/keycloak:9.0.3
     environment:
+      << : *keycloak-enviroment
       JDBC_PARAMS: "useSSL=false"
       KEYCLOAK_IMPORT: "/init_config/.current/realm-export-base.json"
     command: "-Dkeycloak.profile.feature.scripts=enabled -Dkeycloak.profile.feature.upload_scripts=enabled"
