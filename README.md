@@ -43,6 +43,14 @@ $ bin/generate_migation snake_cased_migration_name
 
 Learn more about `Keycloak Config CLI` JSON file syntax from [GitHub repository](https://github.com/adorsys/keycloak-config-cli) and check out [examples](https://github.com/adorsys/keycloak-config-cli/tree/main/src/test/resources/import-files).
 
+### Loading initial configuration
+
+In order to set configuration up initially, load the latest [snapshot](#solving-migration-incompatibilities-with-snapshots) with:
+
+```
+$ make init
+```
+
 ### Keeping secrets in secret
 
 `Keycloak` does not allow exporting secrets, but you can import them. Secrets are stored in a migration file, but obviously, keeping them in plain text is reckless. We avoid it by using [variable substitution](https://github.com/adorsys/keycloak-config-cli#variable-substitution).
@@ -89,6 +97,10 @@ If your migration contains client secret, please do the following:
     ```
 3. Run the migration, so you know that the substitution worked as expected. Using the `Keycloak Admin Console`>`Clients` tab, you can verify the result.
 4. Add your variable to all the Consul environments under `TBA` directory. If it's a production environment, please put more effort into generating a complex and safe one. This step is critical because the deployment fails when the variable is not set. If you don't know how to do it, read: [View and set runtime configuration for a Stuart project](https://stuart-team.atlassian.net/wiki/spaces/EN/pages/906985485/View+and+set+runtime+configuration+for+a+Stuart+project#%F0%9F%94%90-How-to-get-the-Consul-token-from-Vault).
+
+### Solving migration incompatibilities with Snapshots
+
+Unfortunately, previous migration files may become incompatible when the major version of the Keycloak gets upgraded. If it happens, please do not try to fix or delete them because the history of the changes will be lost. In this case, a `Snapshot` of configuration should be generated. Like regular migration files, Snapshots follow the same JSON standard but are stored and used in a different way. You can find them under the `.init_config` directory, named with the `Keycloak` version and prefixed with the creation date.
 
 ## Deployment
 
