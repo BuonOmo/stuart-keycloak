@@ -18,7 +18,7 @@ down:
 
 clean:
 	make down
-	docker volume rm --force stuart-keycloak_mysql_data
+	docker volume rm --force stuart-keycloak_postgres_data
 	make clean-import-files
 
 init:
