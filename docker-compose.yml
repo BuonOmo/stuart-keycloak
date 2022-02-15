@@ -84,3 +84,10 @@ services:
     volumes:
       - "./init_config:/init_config"
       - "./.config_cli:/opt/jboss/.keycloak"
+
+  jq-processor:
+    profiles:
+      - cli
+    image: stedolan/jq
+    volumes:
+      - "./init_config:/init_config"
