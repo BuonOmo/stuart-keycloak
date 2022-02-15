@@ -1,7 +1,7 @@
 version: '3'
 
 volumes:
-  mysql_data:
+  postgres_data:
     driver: local
 
 networks:
@@ -11,23 +11,22 @@ networks:
       com.docker.network.driver.mtu: 9216
 
 services:
-  mysql:
-    image: mysql:5.7
-    volumes:
-      - mysql_data:/var/lib/mysql
+  postgres:
+    image: docker-registry-dev-proxy.internal.stuart.com/postgres:12
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD-root}
-      MYSQL_DATABASE: ${DB_NAME-keycloak}
-      MYSQL_USER: ${DB_USER-keycloak}
-      MYSQL_PASSWORD: ${DB_PASSWORD-password}
+      POSTGRES_DB: ${DB_NAME-keycloak}
+      POSTGRES_USER: ${DB_USER-keycloak}
+      POSTGRES_PASSWORD: ${DB_PASSWORD-password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
     networks:
       - dev
 
   keycloak: &keycloak
     image: quay.io/keycloak/keycloak:latest
     environment:
-      DB_VENDOR: MYSQL
-      DB_ADDR: mysql
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
       DB_DATABASE: ${DB_NAME-keycloak}
       DB_USER: ${DB_USER-keycloak}
       DB_PASSWORD: ${DB_PASSWORD-password}
@@ -36,7 +35,7 @@ services:
     ports:
       - 8180:8080
     depends_on:
-      - mysql
+      - postgres
     networks:
       - dev
 
@@ -72,7 +71,7 @@ services:
     volumes:
       - "./init_config:/init_config"
     depends_on:
-      - mysql
+      - postgres
     networks:
       - dev
 
