@@ -23,7 +23,7 @@ services:
       - dev
 
   keycloak: &keycloak
-    image: quay.io/keycloak/keycloak:latest
+    image: quay.io/keycloak/keycloak:9.0.0
     environment: &keycloak-enviroment
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
