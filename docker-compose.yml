@@ -68,10 +68,9 @@ services:
     << : *keycloak
     profiles:
       - init
-    image: quay.io/keycloak/keycloak:9.0.3
+    image: quay.io/keycloak/keycloak:9.0.0
     environment:
       << : *keycloak-enviroment
-      JDBC_PARAMS: "useSSL=false"
       KEYCLOAK_IMPORT: "/init_config/.current/realm-export-base.json"
     command: "-Dkeycloak.profile.feature.scripts=enabled -Dkeycloak.profile.feature.upload_scripts=enabled"
     volumes:
