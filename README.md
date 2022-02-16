@@ -22,13 +22,9 @@ If you have already `docker` and `docker-compose` installed, you can start `Keyc
 ```$ docker-compose up```
 To make sure that services are up, visit [Keycloak admin](`http://localhost:1080/auth`) afterwards.
 
-## Using Keycloak Config CLI
+## Migrating configuration of Keycloak
 
-Container with configuration tool won't run unless it's started explicitly with:
-```docker-compose keycloak-config-cli```
-This tool loads all the files from the `./keycloak_config` directory, applies the changes to the Keycloak and shuts itself down. Of course, the container with `Keycloak` has to be up, and there is no need to restart it to see the changes.
-
-:warning: Instead of configuring `Keycloak` via its GUI, please use JSON files under `./keycloak_config`. They are generated with:
+:warning: Instead of configuring `Keycloak` via its GUI, please use JSON files under `./keycloak_config/migrations`. They are generated with:
 
 ```
 $ bin/generate_migration -h
@@ -38,10 +34,11 @@ migration_name has to be snake_cased and can't contain digits or whitespaces.
 # For example:
 $ bin/generate_migation snake_cased_migration_name
 ```
-
-:warning: Be careful with the `IMPORT_FORCE` option. It's easy to unintentionally override the data while using JSON-formatted migrations.
-
-Learn more about `Keycloak Config CLI` JSON file syntax from [GitHub repository](https://github.com/adorsys/keycloak-config-cli) and check out [examples](https://github.com/adorsys/keycloak-config-cli/tree/main/src/test/resources/import-files).
+Migrations are performed by [Keycloak Config CLI](https://github.com/adorsys/keycloak-config-cli), so check the docs and [examples](https://github.com/adorsys/keycloak-config-cli/tree/main/src/test/resources/import-files) to learn more about the syntax. When the content of migration is defined, you can run them with:
+```
+$ bin/migrate
+```
+The script finds pending migrations, applies the changes and generates a new dump file that will be used to configure other instances. Before you push new migration into the repository, please make sure that the new dump file is not contaminated with unneeded information.
 
 ### Keeping secrets in secret
 

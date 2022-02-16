@@ -17,7 +17,7 @@ elif [ "$1" == "-h" ]; then
   exit 0
 elif [[ -z ${MIGRATION_NAME//[_[:lower:]]} ]]; then
   TIMESTAMP=`date +"%Y%m%d%H%M%S"`
-  FNAME="./keycloak_config/${TIMESTAMP}_${MIGRATION_NAME}.json"
+  FNAME="./keycloak_config/migrations/${TIMESTAMP}_${MIGRATION_NAME}.json"
 
   touch $FNAME
   echo "{}" >> $FNAME
