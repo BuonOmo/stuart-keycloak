@@ -64,6 +64,14 @@ services:
     networks:
       - dev
 
+  keycloak-cli:
+    << : *keycloak
+    profiles:
+      - cli
+    entrypoint: /opt/jboss/keycloak/bin/kcadm.sh
+    volumes:
+      - "./.config_cli:/opt/jboss/.keycloak"
+
   keycloak-init: &keycloak-init
     << : *keycloak
     profiles:
@@ -80,7 +88,7 @@ services:
     networks:
       - dev
 
-  keycloak-cli:
+  keycloak-cli-init:
     << : *keycloak-init
     profiles:
       - cli

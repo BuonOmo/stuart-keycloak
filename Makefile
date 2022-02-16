@@ -58,15 +58,15 @@ add-admin:
 	docker-compose exec keycloak-init /opt/jboss/keycloak/bin/jboss-cli.sh --connect --command=:reload
 
 login:
-	docker-compose run --rm keycloak-cli config credentials --server http://keycloak-init:8080/auth --user ${KEYCLOAK_USER} --password ${KEYCLOAK_PASSWORD} --realm master
+	docker-compose run --rm keycloak-cli-init config credentials --server http://keycloak-init:8080/auth --user ${KEYCLOAK_USER} --password ${KEYCLOAK_PASSWORD} --realm master
 
 prepare-import-clients:
 	docker-compose run --rm jq-processor -M '.authenticationFlows | map(select(.alias == "Browser With User Access Verification"))[0].id' /${IMPORT_DIR}/realm-export-only-clients.json > ${IMPORT_DIR}/old_id.json
-	docker-compose run --rm keycloak-cli get authentication/flows -r stuart > ${IMPORT_DIR}/flows.json
+	docker-compose run --rm keycloak-cli-init get authentication/flows -r stuart > ${IMPORT_DIR}/flows.json
 	docker-compose run --rm jq-processor -M 'map(select(.alias == "Browser With User Access Verification"))[0].id' /${IMPORT_DIR}/flows.json > ${IMPORT_DIR}/new_id.json
 	docker-compose run --rm jq-processor -M  --argfile new_id /${IMPORT_DIR}/new_id.json --argfile old_id /${IMPORT_DIR}/old_id.json '(.clients[] | select(.authenticationFlowBindingOverrides?.browser == $$old_id).authenticationFlowBindingOverrides.browser) |= $$new_id' /${IMPORT_DIR}/realm-export-only-clients.json > ${IMPORT_DIR}/realm-export-only-clients-updated.json
 
 import-stuart-realm:
 	make prepare-import-clients
-	docker-compose run --rm keycloak-cli create partialImport -r stuart -s ifResourceExists=OVERWRITE -o -f /${IMPORT_DIR}/realm-export-only-clients-updated.json
-	docker-compose run --rm keycloak-cli create partialImport -r stuart -s ifResourceExists=OVERWRITE -o -f /${IMPORT_DIR}/realm-export-only-groups-and-roles.json
+	docker-compose run --rm keycloak-cli-init create partialImport -r stuart -s ifResourceExists=OVERWRITE -o -f /${IMPORT_DIR}/realm-export-only-clients-updated.json
+	docker-compose run --rm keycloak-cli-init create partialImport -r stuart -s ifResourceExists=OVERWRITE -o -f /${IMPORT_DIR}/realm-export-only-groups-and-roles.json
