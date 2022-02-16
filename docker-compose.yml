@@ -39,6 +39,20 @@ services:
     networks:
       - dev
 
+  keycloak-export:
+    << : *keycloak
+    profiles:
+      - init
+    environment:
+      << : *keycloak-enviroment
+    command: "-Dkeycloak.migration.action=export -Dkeycloak.migration.realmName=stuart -Dkeycloak.migration.provider=singleFile -Dkeycloak.migration.usersExportStrategy=SKIP -Dkeycloak.migration.file=/init_config/export.json"
+    volumes:
+      - "./init_config:/init_config"
+    depends_on:
+      - postgres
+    networks:
+      - dev
+
   keycloak-config-cli:
     profiles:
       - config

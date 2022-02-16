@@ -70,3 +70,6 @@ import-stuart-realm:
 	make prepare-import-clients
 	docker-compose run --rm keycloak-cli-init create partialImport -r stuart -s ifResourceExists=OVERWRITE -o -f /${IMPORT_DIR}/realm-export-only-clients-updated.json
 	docker-compose run --rm keycloak-cli-init create partialImport -r stuart -s ifResourceExists=OVERWRITE -o -f /${IMPORT_DIR}/realm-export-only-groups-and-roles.json
+
+realm-export:
+	docker-compose run --rm keycloak-export
