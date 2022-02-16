@@ -38,6 +38,1871 @@
   "quickLoginCheckMilliSeconds": 1000,
   "maxDeltaTimeSeconds": 43200,
   "failureFactor": 30,
+  "roles": {
+    "realm": [
+      {
+        "id": "c3b2dd90-3b30-4585-98bc-10f0d4378684",
+        "name": "admin",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "stuart",
+        "attributes": {}
+      },
+      {
+        "id": "2920af97-8b68-4cd6-b773-1dab59d09826",
+        "name": "uma_authorization",
+        "description": "${role_uma_authorization}",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "stuart",
+        "attributes": {}
+      },
+      {
+        "id": "86e18aa2-39c6-441b-b7f2-3a797f85fe71",
+        "name": "offline_access",
+        "description": "${role_offline-access}",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "stuart",
+        "attributes": {}
+      },
+      {
+        "id": "c14bada9-752c-4710-b700-be0c978c867c",
+        "name": "postman-shared-suite",
+        "description": "Role for the postman-shared-suite client.",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "stuart",
+        "attributes": {}
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "d67fdc23-4de3-4ac7-b619-0f3bd0da8cdb",
+      "name": "REAL Customer Support Global",
+      "path": "/REAL Customer Support Global",
+      "attributes": {
+        "zone_codes": [
+          "any"
+        ],
+        "environments": [
+          "production",
+          "beta",
+          "sandbox"
+        ],
+        "fleet_ids": [
+          "any"
+        ],
+        "allowed_application_ids": [
+          "stuart-mc-package-app"
+        ],
+        "client_ids": [
+          "any"
+        ]
+      },
+      "realmRoles": [],
+      "clientRoles": {
+        "stuart-mc-package-app": [
+          "user-access-control"
+        ]
+      },
+      "subGroups": [
+        {
+          "id": "c7372880-4bb2-44b5-8490-eff3b728c694",
+          "name": "Managers",
+          "path": "/REAL Customer Support Global/Managers",
+          "attributes": {
+            "allowed_application_ids": [
+              "management_groups",
+              "stuart-mc-package-app"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "management-groups": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": []
+        },
+        {
+          "id": "c52946ae-9967-4819-a040-de969edc8207",
+          "name": "TESTING Customer Support",
+          "path": "/REAL Customer Support Global/TESTING Customer Support",
+          "attributes": {
+            "zone_codes": [
+              "any"
+            ],
+            "environments": [
+              "production"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "unset"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "stuart-mc-package-app": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": [
+            {
+              "id": "324fd704-c61c-41cf-8840-846d8d77e1c0",
+              "name": "Managers",
+              "path": "/REAL Customer Support Global/TESTING Customer Support/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management-groups"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "9b238435-e1c1-4153-90f7-70b29519445c",
+          "name": "Customer Support FR",
+          "path": "/REAL Customer Support Global/Customer Support FR",
+          "attributes": {
+            "zone_codes": [
+              "paris"
+            ],
+            "environments": [
+              "production"
+            ],
+            "allowed_application_ids": [
+              "unset"
+            ],
+            "fleet_ids": [
+              "1"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "stuart-mc-package-app": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": [
+            {
+              "id": "aec30f8b-6f2f-45eb-a66c-3476c363073f",
+              "name": "Managers",
+              "path": "/REAL Customer Support Global/Customer Support FR/Managers",
+              "attributes": {},
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            },
+            {
+              "id": "89d7431a-e916-47b2-8896-86b70b425aaf",
+              "name": "Pontica - Supervisor and Shift Leads FR ",
+              "path": "/REAL Customer Support Global/Customer Support FR/Pontica - Supervisor and Shift Leads FR ",
+              "attributes": {
+                "zone_codes": [
+                  "unset"
+                ],
+                "environments": [
+                  "production"
+                ],
+                "fleet_ids": [
+                  "unset"
+                ],
+                "allowed_application_ids": [
+                  "unset"
+                ],
+                "client_ids": [
+                  "unset"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": [
+                {
+                  "id": "baf16d44-7b8c-4b69-bc1f-ac7e2e847617",
+                  "name": "Managers",
+                  "path": "/REAL Customer Support Global/Customer Support FR/Pontica - Supervisor and Shift Leads FR /Managers",
+                  "attributes": {},
+                  "realmRoles": [],
+                  "clientRoles": {
+                    "management-groups": [
+                      "user-access-control"
+                    ]
+                  },
+                  "subGroups": []
+                }
+              ]
+            },
+            {
+              "id": "c74376d8-8400-40f8-a799-d60d3d839c40",
+              "name": "Pontica - Admin Team Pontica  FR",
+              "path": "/REAL Customer Support Global/Customer Support FR/Pontica - Admin Team Pontica  FR",
+              "attributes": {
+                "zone_codes": [
+                  "paris"
+                ],
+                "environments": [
+                  "production"
+                ],
+                "fleet_ids": [
+                  "1"
+                ],
+                "allowed_application_ids": [
+                  "unset"
+                ],
+                "client_ids": [
+                  "any"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "stuart-mc-package-app": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": [
+                {
+                  "id": "40d0bcdf-b8ea-46a5-9be1-b8846b82eac1",
+                  "name": "Managers",
+                  "path": "/REAL Customer Support Global/Customer Support FR/Pontica - Admin Team Pontica  FR/Managers",
+                  "attributes": {},
+                  "realmRoles": [],
+                  "clientRoles": {
+                    "management-groups": [
+                      "user-access-control"
+                    ]
+                  },
+                  "subGroups": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fdbe545d-a6b6-40f2-9e8d-fddf2f0a91bf",
+          "name": "Apple Monitoring UK",
+          "path": "/REAL Customer Support Global/Apple Monitoring UK",
+          "attributes": {
+            "zone_codes": [
+              "any"
+            ],
+            "environments": [
+              "production"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "stuart-mc-package-app"
+            ],
+            "client_ids": [
+              "132403"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "stuart-mc-package-app": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": [
+            {
+              "id": "1a6a0579-379a-4635-a451-b7c0e2399b0e",
+              "name": "Managers",
+              "path": "/REAL Customer Support Global/Apple Monitoring UK/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "9721a71f-d7fe-472c-837a-d7790ffa7a82",
+          "name": "Customer Support SM",
+          "path": "/REAL Customer Support Global/Customer Support SM",
+          "attributes": {
+            "environments": [
+              "production"
+            ],
+            "zone_codes": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "unset"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "stuart-mc-package-app": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": [
+            {
+              "id": "eed14844-9196-4999-80ee-d466b8629930",
+              "name": "Managers",
+              "path": "/REAL Customer Support Global/Customer Support SM/Managers",
+              "attributes": {},
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f832e8ca-1d6f-402e-8004-b5bbd47de93e",
+      "name": "REAL Delivery Slots Admins",
+      "path": "/REAL Delivery Slots Admins",
+      "attributes": {
+        "environments": [
+          "production",
+          "sandbox",
+          "qa",
+          "ephemeral",
+          "beta",
+          "development"
+        ],
+        "zone_codes": [
+          "any"
+        ],
+        "fleet_ids": [
+          "any"
+        ],
+        "allowed_application_ids": [
+          "stuart-mc-package-app",
+          "delivery-slots"
+        ],
+        "client_ids": [
+          "any"
+        ]
+      },
+      "realmRoles": [],
+      "clientRoles": {
+        "delivery-slots": [
+          "user-access-control"
+        ]
+      },
+      "subGroups": [
+        {
+          "id": "e7393585-a7fc-4934-b3d2-49540d74e279",
+          "name": "AM01",
+          "path": "/REAL Delivery Slots Admins/AM01",
+          "attributes": {
+            "environments": [
+              "production",
+              "sandbox",
+              "qa",
+              "ephemeral",
+              "beta",
+              "development"
+            ],
+            "zone_codes": [
+              "any"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "unset"
+            ],
+            "client_ids": [
+              "39663"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "a3c3417a-4354-4f57-bf52-22fa22cc939a",
+              "name": "Managers",
+              "path": "/REAL Delivery Slots Admins/AM01/Managers",
+              "attributes": {},
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "a6c804ed-7f25-4312-a78e-663b592b3bf2",
+          "name": "Managers",
+          "path": "/REAL Delivery Slots Admins/Managers",
+          "attributes": {
+            "allowed_application_ids": [
+              "management_groups",
+              "stuart-mc-package-app",
+              "delivery-slots"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "management-groups": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": []
+        }
+      ]
+    },
+    {
+      "id": "f37643fe-01b9-4d83-87cb-4857e82c2fa9",
+      "name": "Stuart Dev Platform",
+      "path": "/Stuart Dev Platform",
+      "attributes": {
+        "features": [
+          "packageHistory",
+          "packageSearchCustomParams",
+          "featureFlags",
+          "dma",
+          "driverEarnings",
+          "pushFraudEstimations"
+        ],
+        "zone_codes": [
+          "any"
+        ],
+        "environments": [
+          "production",
+          "sandbox",
+          "qa",
+          "ephemeral",
+          "beta",
+          "development"
+        ],
+        "fleet_ids": [
+          "any"
+        ],
+        "allowed_application_ids": [
+          "stuart-mc-package-app",
+          "delivery-slots",
+          "stuart-poeta-visualization"
+        ],
+        "flags": [
+          "pii",
+          "preview",
+          "invisible"
+        ],
+        "client_ids": [
+          "any"
+        ]
+      },
+      "realmRoles": [],
+      "clientRoles": {
+        "stuart-mc-package-app": [
+          "user-access-control"
+        ]
+      },
+      "subGroups": [
+        {
+          "id": "f1af4aae-59f2-43ed-bac1-9e58eb222d22",
+          "name": "Managers",
+          "path": "/Stuart Dev Platform/Managers",
+          "attributes": {
+            "allowed_application_ids": [
+              "management-groups",
+              "stuart-mc-package-app",
+              "delivery-slots",
+              "stuart-poeta-visualization"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "management-groups": [
+              "user-access-control"
+            ],
+            "stuart-mc-package-app": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": []
+        }
+      ]
+    },
+    {
+      "id": "a1504061-8a22-4ab2-91a4-74005d14ef9a",
+      "name": "Stuart E2E",
+      "path": "/Stuart E2E",
+      "attributes": {
+        "zone_codes": [
+          "any"
+        ],
+        "environments": [
+          "production",
+          "sandbox",
+          "qa",
+          "ephemeral",
+          "beta",
+          "development"
+        ],
+        "allowed_application_ids": [
+          "none"
+        ],
+        "fleet_ids": [
+          "any"
+        ],
+        "client_ids": [
+          "any"
+        ]
+      },
+      "realmRoles": [],
+      "clientRoles": {
+        "stuart-mc-package-app": [
+          "user-access-control"
+        ]
+      },
+      "subGroups": [
+        {
+          "id": "d57cb5f1-d81e-48c7-b253-a7059fe3f4c3",
+          "name": "QA 1",
+          "path": "/Stuart E2E/QA 1",
+          "attributes": {
+            "zone_codes": [
+              "unset"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "8e64b871-2a2f-4230-8573-57a4f3ef3ec3",
+              "name": "Managers",
+              "path": "/Stuart E2E/QA 1/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "97cd0290-8ba4-46b6-acec-2f9f110a75c1",
+          "name": "Managers",
+          "path": "/Stuart E2E/Managers",
+          "attributes": {
+            "allowed_application_ids": [
+              "management_groups",
+              "stuart-mc-package-app"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "management-groups": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": []
+        }
+      ]
+    },
+    {
+      "id": "65802567-1eac-4b1e-9d59-372ff7c5a4f4",
+      "name": "Stuart E2E 2",
+      "path": "/Stuart E2E 2",
+      "attributes": {
+        "features": [
+          "packageHistory",
+          "packageSearchCustomParams",
+          "featureFlags",
+          "dma",
+          "driverEarnings",
+          "pushFraudEstimations"
+        ],
+        "allowed_application_ids": [
+          "stuart-mc-package-app"
+        ]
+      },
+      "realmRoles": [],
+      "clientRoles": {
+        "stuart-mc-package-app": [
+          "user-access-control"
+        ]
+      },
+      "subGroups": [
+        {
+          "id": "976558ba-63ca-4a4f-bb15-d531597e2a04",
+          "name": "Managers",
+          "path": "/Stuart E2E 2/Managers",
+          "attributes": {
+            "allowed_application_ids": [
+              "management_groups",
+              "stuart-mc-package-app"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "management-groups": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": []
+        }
+      ]
+    },
+    {
+      "id": "aee219bc-39c6-46e8-89fe-378d4e7e91ae",
+      "name": "TESTING ONLY Stuart France",
+      "path": "/TESTING ONLY Stuart France",
+      "attributes": {
+        "zone_codes": [
+          "aix_en_provence",
+          "amiens",
+          "angers",
+          "angouleme",
+          "annecy",
+          "antibes",
+          "arras",
+          "aubagne",
+          "avignon",
+          "bayonne",
+          "beauvais",
+          "belfort",
+          "besancon",
+          "bethune",
+          "beziers",
+          "blois",
+          "bordeaux",
+          "boulogne_sur_mer",
+          "bourges",
+          "brest",
+          "brive",
+          "caen",
+          "calais",
+          "cannes",
+          "carcassonne",
+          "cazeres",
+          "chalon_sur_saone",
+          "chalons_en_champagne",
+          "chambery",
+          "charleville_mezieres",
+          "chartres",
+          "cherbourg",
+          "cholet",
+          "clermont_ferrand",
+          "colmar",
+          "dieppe",
+          "dijon",
+          "dinard",
+          "douai",
+          "dunkerque",
+          "evreux",
+          "foix",
+          "frejus_saint_raphael",
+          "grenoble",
+          "guerande",
+          "hyeres",
+          "la_roche_sur_yon",
+          "la_rochelle",
+          "le_havre",
+          "le_mans",
+          "lens",
+          "lille",
+          "limoges",
+          "lorient",
+          "lyon",
+          "marseille",
+          "merignac",
+          "merlimont",
+          "metz",
+          "montauban",
+          "montpellier",
+          "mulhouse",
+          "nancy",
+          "nantes",
+          "narbonne",
+          "neydens",
+          "nice",
+          "nimes",
+          "niort",
+          "orleans",
+          "pamiers",
+          "paris",
+          "pau",
+          "perigueux",
+          "perpignan",
+          "poitiers",
+          "quimper",
+          "reims",
+          "rennes",
+          "roubaix",
+          "rouen",
+          "saint_brieuc",
+          "saint_etienne",
+          "saint_nazaire",
+          "saint_quentin",
+          "sedan",
+          "soissons",
+          "strasbourg",
+          "tarbes",
+          "thionville",
+          "toulon",
+          "toulouse",
+          "tours",
+          "troyes",
+          "valence",
+          "valenciennes",
+          "vannes"
+        ],
+        "environments": [
+          "production",
+          "sandbox",
+          "qa",
+          "ephemeral",
+          "beta",
+          "development"
+        ],
+        "fleet_ids": [
+          "any"
+        ],
+        "allowed_application_ids": [
+          "stuart-mc-package-app"
+        ],
+        "client_ids": [
+          "any"
+        ]
+      },
+      "realmRoles": [],
+      "clientRoles": {
+        "stuart-mc-package-app": [
+          "user-access-control"
+        ]
+      },
+      "subGroups": [
+        {
+          "id": "ed78820a-6003-46ab-b770-4c036ea33013",
+          "name": "City Operations",
+          "path": "/TESTING ONLY Stuart France/City Operations",
+          "attributes": {
+            "zone_codes": [
+              "paris"
+            ],
+            "environments": [
+              "production",
+              "sandbox",
+              "qa",
+              "ephemeral",
+              "beta",
+              "development"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "stuart-mc-package-app"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "stuart-mc-package-app": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": [
+            {
+              "id": "e9bb9ef1-dc9d-4032-9388-1159e2f80250",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart France/City Operations/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            },
+            {
+              "id": "2b9d5966-0708-438d-9562-d7ebc47ad0f2",
+              "name": "City Operations Lyon",
+              "path": "/TESTING ONLY Stuart France/City Operations/City Operations Lyon",
+              "attributes": {
+                "zone_codes": [
+                  "paris"
+                ],
+                "environments": [
+                  "production",
+                  "sandbox",
+                  "qa",
+                  "ephemeral",
+                  "beta",
+                  "development"
+                ],
+                "fleet_ids": [
+                  "unset"
+                ],
+                "allowed_application_ids": [
+                  "stuart-mc-package-app"
+                ],
+                "client_ids": [
+                  "unset"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "stuart-mc-package-app": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": [
+                {
+                  "id": "4bbe26a1-5ac3-4fdc-9469-92cb48afa67d",
+                  "name": "Managers",
+                  "path": "/TESTING ONLY Stuart France/City Operations/City Operations Lyon/Managers",
+                  "attributes": {
+                    "allowed_application_ids": [
+                      "management_groups",
+                      "stuart-mc-package-app"
+                    ]
+                  },
+                  "realmRoles": [],
+                  "clientRoles": {
+                    "management-groups": [
+                      "user-access-control"
+                    ]
+                  },
+                  "subGroups": []
+                }
+              ]
+            },
+            {
+              "id": "c8822e7b-b9c1-4e8d-9cd6-ab7239cc9c61",
+              "name": "City Operations Paris",
+              "path": "/TESTING ONLY Stuart France/City Operations/City Operations Paris",
+              "attributes": {
+                "zone_codes": [
+                  "paris"
+                ],
+                "environments": [
+                  "production",
+                  "sandbox",
+                  "qa",
+                  "ephemeral",
+                  "beta",
+                  "development"
+                ],
+                "fleet_ids": [
+                  "any"
+                ],
+                "allowed_application_ids": [
+                  "stuart-mc-package-app"
+                ],
+                "client_ids": [
+                  "any"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "stuart-mc-package-app": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": [
+                {
+                  "id": "465c3c1e-790c-42b5-9fad-f5b95bd59cdb",
+                  "name": "Managers",
+                  "path": "/TESTING ONLY Stuart France/City Operations/City Operations Paris/Managers",
+                  "attributes": {
+                    "allowed_application_ids": [
+                      "management_groups",
+                      "stuart-mc-package-app"
+                    ]
+                  },
+                  "realmRoles": [],
+                  "clientRoles": {
+                    "management-groups": [
+                      "user-access-control"
+                    ]
+                  },
+                  "subGroups": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c4da73a0-df76-45c3-a811-636123c32e2f",
+          "name": "Delivery Slot Managers test",
+          "path": "/TESTING ONLY Stuart France/Delivery Slot Managers test",
+          "attributes": {
+            "zone_codes": [
+              "any"
+            ],
+            "environments": [
+              "production",
+              "sandbox",
+              "qa",
+              "ephemeral",
+              "beta",
+              "development"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "stuart-mc-package-app"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "delivery-slots": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": [
+            {
+              "id": "782d75b3-2810-490c-af40-8f6a4a821370",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart France/Delivery Slot Managers test/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "603dd849-923f-4cc5-a126-91c12493baf5",
+          "name": "Courier Operations",
+          "path": "/TESTING ONLY Stuart France/Courier Operations",
+          "attributes": {
+            "zone_codes": [
+              "unset"
+            ],
+            "environments": [
+              "unset"
+            ],
+            "allowed_application_ids": [
+              "stuart-mc-package-app"
+            ],
+            "client_ids": [
+              "unset"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "c34a4613-3daa-482a-b040-79d36d96c87d",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart France/Courier Operations/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "785b93ec-899e-4eca-9596-0319bb2e97a5",
+          "name": "Product",
+          "path": "/TESTING ONLY Stuart France/Product",
+          "attributes": {
+            "zone_codes": [
+              "toulon",
+              "annecy",
+              "mulhouse",
+              "dunkerque",
+              "douai",
+              "valenciennes",
+              "beauvais",
+              "le_mans",
+              "roubaix",
+              "thionville",
+              "charleville_mezieres",
+              "cholet",
+              "saint_quentin",
+              "poitiers",
+              "colmar",
+              "besancon",
+              "soissons",
+              "arras",
+              "avignon",
+              "antibes",
+              "aubagne",
+              "valence",
+              "chambery",
+              "frejus_saint_raphael",
+              "perpignan",
+              "brest",
+              "pau",
+              "beziers",
+              "bayonne",
+              "vannes",
+              "bourges",
+              "blois",
+              "chartres",
+              "la_rochelle",
+              "quimper",
+              "pamiers",
+              "niort",
+              "merlimont",
+              "boulogne_sur_mer",
+              "foix",
+              "paris",
+              "lyon",
+              "bordeaux",
+              "toulouse",
+              "montpellier",
+              "limoges",
+              "nantes",
+              "perigueux",
+              "strasbourg",
+              "lille",
+              "grenoble",
+              "rennes",
+              "dijon",
+              "reims",
+              "amiens",
+              "nice",
+              "angouleme",
+              "brive",
+              "evreux",
+              "rouen",
+              "nancy",
+              "metz",
+              "le_havre",
+              "merignac",
+              "aix_en_provence",
+              "marseille",
+              "tours",
+              "orleans",
+              "clermont_ferrand",
+              "angers",
+              "caen",
+              "cannes",
+              "saint_etienne",
+              "nimes",
+              "calais"
+            ],
+            "environments": [
+              "production",
+              "sandbox",
+              "qa",
+              "ephemerals",
+              "beta",
+              "development"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "stuart-mc-package-app"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "stuart-mc-package-app": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": [
+            {
+              "id": "f018f7cd-406b-4a0a-91f7-0fa3794e49a6",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart France/Product/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            },
+            {
+              "id": "7baf8d34-01d7-4978-800f-47252fcd2417",
+              "name": "Junior PM's",
+              "path": "/TESTING ONLY Stuart France/Product/Junior PM's",
+              "attributes": {
+                "zone_codes": [
+                  "unset"
+                ],
+                "environments": [
+                  "unset"
+                ],
+                "fleet_ids": [
+                  "unset"
+                ],
+                "allowed_application_ids": [
+                  "stuart-mc-package-app"
+                ],
+                "client_ids": [
+                  "unset"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": [
+                {
+                  "id": "7736f006-fb36-4b98-916a-1424f8855310",
+                  "name": "Managers",
+                  "path": "/TESTING ONLY Stuart France/Product/Junior PM's/Managers",
+                  "attributes": {
+                    "allowed_application_ids": [
+                      "management_groups",
+                      "stuart-mc-package-app"
+                    ]
+                  },
+                  "realmRoles": [],
+                  "clientRoles": {
+                    "management-groups": [
+                      "user-access-control"
+                    ]
+                  },
+                  "subGroups": []
+                }
+              ]
+            },
+            {
+              "id": "ea69c8e0-8541-448e-8828-8c8c4693657e",
+              "name": "Senior PM's",
+              "path": "/TESTING ONLY Stuart France/Product/Senior PM's",
+              "attributes": {
+                "zone_codes": [
+                  "unset"
+                ],
+                "environments": [
+                  "unset"
+                ],
+                "fleet_ids": [
+                  "unset"
+                ],
+                "allowed_application_ids": [
+                  "stuart-mc-package-app"
+                ],
+                "client_ids": [
+                  "unset"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": [
+                {
+                  "id": "0a082b9f-d097-4592-beae-a0f2dcb35594",
+                  "name": "Managers",
+                  "path": "/TESTING ONLY Stuart France/Product/Senior PM's/Managers",
+                  "attributes": {
+                    "allowed_application_ids": [
+                      "management_groups",
+                      "stuart-mc-package-app"
+                    ]
+                  },
+                  "realmRoles": [],
+                  "clientRoles": {
+                    "management-groups": [
+                      "user-access-control"
+                    ]
+                  },
+                  "subGroups": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5680ff36-7fa3-4a34-8f6d-c311be7b88c7",
+          "name": "Managers",
+          "path": "/TESTING ONLY Stuart France/Managers",
+          "attributes": {
+            "allowed_application_ids": [
+              "management_groups",
+              "stuart-mc-package-app"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "management-groups": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": []
+        },
+        {
+          "id": "38c6171c-c7a4-4c55-9626-a5918f618ec1",
+          "name": "Account Management",
+          "path": "/TESTING ONLY Stuart France/Account Management",
+          "attributes": {
+            "zone_codes": [
+              "unset"
+            ],
+            "environments": [
+              "unset"
+            ],
+            "allowed_application_ids": [
+              "stuart-mc-package-app"
+            ],
+            "client_ids": [
+              "unset"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "8e42391e-4cac-423d-b9b7-f24acd88c208",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart France/Account Management/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "d12b76c7-d30f-44e0-bc28-f50c8a4a593c",
+          "name": "helloTest",
+          "path": "/TESTING ONLY Stuart France/helloTest",
+          "attributes": {
+            "zone_codes": [
+              "unset"
+            ],
+            "environments": [
+              "unset"
+            ],
+            "fleet_ids": [
+              "unset"
+            ],
+            "allowed_application_ids": [
+              "unset"
+            ],
+            "client_ids": [
+              "unset"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "08d6fcbb-d422-4966-9561-3b0ac44ed716",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart France/helloTest/Managers",
+              "attributes": {},
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "b0601f3c-0f49-4609-a57d-c958c63a1e17",
+          "name": "Product Analyst",
+          "path": "/TESTING ONLY Stuart France/Product Analyst",
+          "attributes": {
+            "zone_codes": [
+              "aix_en_provence",
+              "marseille",
+              "tours",
+              "orleans",
+              "clermont_ferrand",
+              "angers",
+              "caen",
+              "cannes",
+              "saint_etienne",
+              "nimes",
+              "calais",
+              "toulon",
+              "annecy",
+              "mulhouse",
+              "dunkerque",
+              "douai",
+              "valenciennes",
+              "beauvais",
+              "le_mans",
+              "roubaix",
+              "thionville",
+              "charleville_mezieres",
+              "cholet",
+              "saint_quentin",
+              "poitiers",
+              "colmar",
+              "besancon",
+              "soissons",
+              "arras",
+              "avignon",
+              "antibes",
+              "aubagne",
+              "valence",
+              "chambery",
+              "frejus_saint_raphael",
+              "perpignan",
+              "brest",
+              "pau",
+              "beziers",
+              "bayonne",
+              "vannes",
+              "bourges",
+              "blois",
+              "chartres",
+              "la_rochelle",
+              "quimper",
+              "pamiers",
+              "niort",
+              "merlimont",
+              "boulogne_sur_mer",
+              "foix",
+              "paris",
+              "lyon",
+              "bordeaux",
+              "toulouse",
+              "montpellier",
+              "limoges",
+              "nantes",
+              "perigueux",
+              "strasbourg",
+              "lille",
+              "grenoble",
+              "rennes",
+              "dijon",
+              "reims",
+              "amiens",
+              "nice",
+              "angouleme",
+              "brive",
+              "evreux",
+              "rouen",
+              "nancy",
+              "metz",
+              "le_havre",
+              "merignac"
+            ],
+            "environments": [
+              "unset"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "stuart-mc-package-app"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "stuart-mc-package-app": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": [
+            {
+              "id": "97a7923d-c61f-4489-8456-808be1368785",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart France/Product Analyst/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7b758292-1779-46dd-8ec9-774dd43ab74f",
+      "name": "TESTING ONLY Stuart Spain",
+      "path": "/TESTING ONLY Stuart Spain",
+      "attributes": {
+        "zone_codes": [
+          "girona",
+          "madrid",
+          "malaga",
+          "sevilla",
+          "valencia",
+          "valles",
+          "zaragoza",
+          "barcelona",
+          "bilbao"
+        ],
+        "environments": [
+          "production",
+          "sandbox",
+          "qa",
+          "ephemeral",
+          "beta",
+          "development"
+        ],
+        "fleet_ids": [
+          "any"
+        ],
+        "allowed_application_ids": [
+          "stuart-mc-package-app"
+        ],
+        "client_ids": [
+          "any"
+        ]
+      },
+      "realmRoles": [],
+      "clientRoles": {
+        "stuart-mc-package-app": [
+          "user-access-control"
+        ]
+      },
+      "subGroups": [
+        {
+          "id": "a81d3d04-487f-44e9-861c-bc14c932f7e2",
+          "name": "TEST Designers",
+          "path": "/TESTING ONLY Stuart Spain/TEST Designers",
+          "attributes": {
+            "zone_codes": [
+              "any"
+            ],
+            "environments": [
+              "production"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "unset"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "12b33c9d-3c73-4579-92f0-8defb180ec5d",
+              "name": "TEST Designers Sub Group",
+              "path": "/TESTING ONLY Stuart Spain/TEST Designers/TEST Designers Sub Group",
+              "attributes": {
+                "zone_codes": [
+                  "unset"
+                ],
+                "environments": [
+                  "unset"
+                ],
+                "fleet_ids": [
+                  "unset"
+                ],
+                "allowed_application_ids": [
+                  "unset"
+                ],
+                "client_ids": [
+                  "unset"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": [
+                {
+                  "id": "1b5f4534-aa52-4dc2-bb59-65e72136db28",
+                  "name": "TEST Designers Sub Group Sub Group",
+                  "path": "/TESTING ONLY Stuart Spain/TEST Designers/TEST Designers Sub Group/TEST Designers Sub Group Sub Group",
+                  "attributes": {
+                    "environments": [
+                      "unset"
+                    ],
+                    "zone_codes": [
+                      "unset"
+                    ],
+                    "allowed_application_ids": [
+                      "unset"
+                    ],
+                    "fleet_ids": [
+                      "unset"
+                    ],
+                    "client_ids": [
+                      "unset"
+                    ]
+                  },
+                  "realmRoles": [],
+                  "clientRoles": {},
+                  "subGroups": [
+                    {
+                      "id": "d61602e6-caf0-4248-a0f6-b0e85ecfaa9f",
+                      "name": "Managers",
+                      "path": "/TESTING ONLY Stuart Spain/TEST Designers/TEST Designers Sub Group/TEST Designers Sub Group Sub Group/Managers",
+                      "attributes": {},
+                      "realmRoles": [],
+                      "clientRoles": {
+                        "management-groups": [
+                          "user-access-control"
+                        ]
+                      },
+                      "subGroups": []
+                    }
+                  ]
+                },
+                {
+                  "id": "b5e974be-44a8-41b8-bd6e-4d33f6c81563",
+                  "name": "Managers",
+                  "path": "/TESTING ONLY Stuart Spain/TEST Designers/TEST Designers Sub Group/Managers",
+                  "attributes": {},
+                  "realmRoles": [],
+                  "clientRoles": {
+                    "management-groups": [
+                      "user-access-control"
+                    ]
+                  },
+                  "subGroups": []
+                }
+              ]
+            },
+            {
+              "id": "227e408e-0ef8-44c0-88f0-f968368547ca",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart Spain/TEST Designers/Managers",
+              "attributes": {},
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "f9fa2443-883e-4d2e-a8ac-6915da34da89",
+          "name": "Managers",
+          "path": "/TESTING ONLY Stuart Spain/Managers",
+          "attributes": {
+            "allowed_application_ids": [
+              "management_groups",
+              "stuart-mc-package-app"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "management-groups": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": []
+        },
+        {
+          "id": "3b1d711d-0900-431f-b8dc-69e14482c5d6",
+          "name": "Live Operations",
+          "path": "/TESTING ONLY Stuart Spain/Live Operations",
+          "attributes": {
+            "zone_codes": [
+              "girona"
+            ],
+            "environments": [
+              "unset"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "stuart-mc-package-app"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "stuart-mc-package-app": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": [
+            {
+              "id": "ee2567d4-d8b3-47fe-9f8b-1087c926faf2",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart Spain/Live Operations/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1f237bd5-e08d-4c8c-9e0d-e53622eecda1",
+      "name": "TESTING ONLY Stuart UK",
+      "path": "/TESTING ONLY Stuart UK",
+      "attributes": {
+        "zone_codes": [
+          "basildon",
+          "birmingham",
+          "blackpool",
+          "bournemouth",
+          "brighton",
+          "bristol",
+          "cambridge",
+          "cardiff",
+          "darlington",
+          "derby",
+          "exeter",
+          "gillingham",
+          "grimsby",
+          "huddersfield",
+          "hull",
+          "leeds",
+          "leicester",
+          "liverpool",
+          "london",
+          "manchester",
+          "milton_keynes",
+          "newcastle_gateshead",
+          "northampton",
+          "nottingham",
+          "oxford",
+          "plymouth",
+          "reading",
+          "sheffield",
+          "south_shields",
+          "southampton",
+          "sunderland",
+          "swansea",
+          "teesside",
+          "wakefield",
+          "warrington"
+        ],
+        "environments": [
+          "production",
+          "sandbox",
+          "qa",
+          "ephemeral",
+          "beta",
+          "development"
+        ],
+        "fleet_ids": [
+          "any"
+        ],
+        "allowed_application_ids": [
+          "stuart-mc-package-app"
+        ],
+        "client_ids": [
+          "any"
+        ]
+      },
+      "realmRoles": [],
+      "clientRoles": {
+        "stuart-mc-package-app": [
+          "user-access-control"
+        ]
+      },
+      "subGroups": [
+        {
+          "id": "fe33d650-03f9-416e-b8f7-ec72c2c7c44d",
+          "name": "Operations",
+          "path": "/TESTING ONLY Stuart UK/Operations",
+          "attributes": {
+            "zone_codes": [
+              "southampton",
+              "northampton",
+              "swansea",
+              "reading",
+              "cardiff",
+              "gillingham",
+              "huddersfield",
+              "bournemouth",
+              "birmingham",
+              "blackpool",
+              "cambridge",
+              "brighton",
+              "warrington",
+              "leicester",
+              "milton_keynes",
+              "nottingham",
+              "london",
+              "newcastle_gateshead",
+              "south_shields",
+              "sunderland",
+              "darlington",
+              "teesside",
+              "leeds",
+              "sheffield",
+              "grimsby",
+              "bristol",
+              "liverpool",
+              "manchester",
+              "wakefield",
+              "derby",
+              "hull",
+              "oxford",
+              "plymouth",
+              "basildon",
+              "exeter"
+            ],
+            "environments": [
+              "unset"
+            ],
+            "fleet_ids": [
+              "any"
+            ],
+            "allowed_application_ids": [
+              "stuart-mc-package-app"
+            ],
+            "client_ids": [
+              "any"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "cc7df46e-70e2-427f-af6f-b698a06b78d5",
+              "name": "Managers",
+              "path": "/TESTING ONLY Stuart UK/Operations/Managers",
+              "attributes": {
+                "allowed_application_ids": [
+                  "management_groups",
+                  "stuart-mc-package-app"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {
+                "management-groups": [
+                  "user-access-control"
+                ]
+              },
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "448a2831-ae36-4be8-932d-1604690cab0d",
+          "name": "Managers",
+          "path": "/TESTING ONLY Stuart UK/Managers",
+          "attributes": {
+            "allowed_application_ids": [
+              "management_groups",
+              "stuart-mc-package-app"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {
+            "management-groups": [
+              "user-access-control"
+            ]
+          },
+          "subGroups": []
+        }
+      ]
+    }
+  ],
   "defaultRoles": [
     "uma_authorization",
     "offline_access"
@@ -218,6 +2083,23 @@
             "id.token.claim": "false",
             "access.token.claim": "true",
             "claim.name": "srt:zone_codes",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "8845ace3-1926-4881-9705-9d79568ad36d",
+          "name": "allowed_application_ids",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "aggregate.attrs": "true",
+            "userinfo.token.claim": "false",
+            "multivalued": "true",
+            "user.attribute": "allowed_application_ids",
+            "id.token.claim": "false",
+            "access.token.claim": "true",
+            "claim.name": "srt:allowed_application_ids",
             "jsonType.label": "String"
           }
         },

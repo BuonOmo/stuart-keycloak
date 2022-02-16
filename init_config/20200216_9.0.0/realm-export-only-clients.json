@@ -968,24 +968,23 @@
       "secret": "**********",
       "redirectUris": [
         "https://flow.beta.stuart.com/oauth/callback/apps",
-        "https://flow-eph-wbxj7z.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-r4koi8.dev.stuart.com/oauth/callback/apps",
         "https://flow-eph-28ed5q.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-iklw2q.dev.stuart.com/oauth/callback/apps",
         "https://flow-eph-ylio0k.dev.stuart.com/oauth/callback/apps",
         "https://flow.stuart.com/oauth/callback/apps",
+        "https://flow-eph-02arp0.dev.stuart.com/oauth/callback/apps",
         "https://flow-eph-y7jwxv.dev.stuart.com/oauth/callback/apps",
         "http://localhost:3000/oauth/callback/apps",
-        "https://flow-eph-1maztj.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-rk1mbq.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-ttr4i0.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-n1nm7s.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-0kkypd.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-29p7xn.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-pudbn0.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-bp5jmd.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-sp49v0.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-659f1g.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-3u5tx4.dev.stuart.com/oauth/callback/apps",
         "http://127.0.0.1:9999/oauth/callback",
-        "https://flow-eph-hirui7.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-jinpl5.dev.stuart.com/oauth/callback/apps",
         "https://flow-eph-emzcoe.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-mdanrp.dev.stuart.com/oauth/callback/apps"
+        "https://flow-eph-jinpl5.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-mdanrp.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-rjoph6.dev.stuart.com/oauth/callback/apps"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -1015,7 +1014,7 @@
         "saml.onetimeuse.condition": "false"
       },
       "authenticationFlowBindingOverrides": {
-        "browser": "e0c1c019-ee8a-4015-8eb4-3032468ee181"
+        "browser": "cb587590-17dd-43a8-944f-7a2aed1ed0aa"
       },
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
@@ -5666,7 +5665,7 @@
           "protocolMapper": "oidc-hardcoded-claim-mapper",
           "consentRequired": false,
           "config": {
-            "claim.value": "[\"whoami\", \"packageSearches\", \"businessRules\", \"packageSearchResults\", \"search\", \"zone\", \"zones\", \"deliveries\", \"delivery\", \"deliverySlots\", \"drivers\", \"driver\", \"calculateDistanceAndDuration\", \"invitableDrivers\", \"savedSearches\", \"zones\", \"clients\", \"fleets\", \"preOrderETA\", \"package\", \"packages\", \"userGroup\", \"geocode\", \"reverseGeocode\", \"unfixGeocode\", \"fixGeocode\", \"featureFlags\",\"shifts\",\"webhooks\",\"webhookTopics\", \"endCustomerPackage\"]",
+            "claim.value": "[\"whoami\", \"packages\",\"packageSearches\", \"businessRules\", \"packageSearchResults\", \"search\", \"zone\", \"zones\", \"deliveries\", \"delivery\", \"deliverySlots\", \"drivers\", \"driver\", \"calculateDistanceAndDuration\", \"invitableDrivers\", \"savedSearches\", \"zones\", \"clients\", \"fleets\", \"preOrderETA\", \"package\", \"packages\", \"userGroup\", \"geocode\", \"reverseGeocode\", \"unfixGeocode\", \"fixGeocode\", \"featureFlags\",\"shifts\",\"webhooks\",\"webhookTopics\", \"endCustomerPackage\"]",
             "userinfo.token.claim": "true",
             "id.token.claim": "true",
             "access.token.claim": "true",
@@ -7552,24 +7551,23 @@
       "redirectUris": [
         "http://localhost:3002/oauth/callback",
         "https://flow.stuart.com/oauth/callback",
-        "https://flow-eph-0kkypd.dev.stuart.com/oauth/callback",
-        "https://flow-eph-r4koi8.dev.stuart.com/oauth/callback",
+        "https://flow-eph-rjoph6.dev.stuart.com/oauth/callback",
+        "https://flow-eph-29p7xn.dev.stuart.com/oauth/callback",
+        "https://flow-eph-02arp0.dev.stuart.com/oauth/callback",
         "http://localhost:3000/oauth/callback",
-        "https://flow-eph-iklw2q.dev.stuart.com/oauth/callback",
-        "https://flow-eph-ttr4i0.dev.stuart.com/oauth/callback",
         "https://flow-eph-mdanrp.dev.stuart.com/oauth/callback",
-        "https://flow-eph-rk1mbq.dev.stuart.com/oauth/callback",
-        "https://flow-eph-wbxj7z.dev.stuart.com/oauth/callback",
-        "https://flow-eph-1maztj.dev.stuart.com/oauth/callback",
+        "https://flow-eph-3u5tx4.dev.stuart.com/oauth/callback",
+        "https://flow-eph-659f1g.dev.stuart.com/oauth/callback",
+        "https://flow-eph-bp5jmd.dev.stuart.com/oauth/callback",
         "https://flow-eph-28ed5q.dev.stuart.com/oauth/callback",
         "https://flow-eph-ylio0k.dev.stuart.com/oauth/callback",
+        "https://flow-eph-pudbn0.dev.stuart.com/oauth/callback",
         "https://flow-eph-y7jwxv.dev.stuart.com/oauth/callback",
         "http://127.0.0.1:9999/oauth/callback",
         "https://flow.beta.stuart.com/oauth/callback",
         "https://flow-eph-emzcoe.dev.stuart.com/oauth/callback",
-        "https://flow-eph-hirui7.dev.stuart.com/oauth/callback",
         "https://flow-eph-jinpl5.dev.stuart.com/oauth/callback",
-        "https://flow-eph-n1nm7s.dev.stuart.com/oauth/callback"
+        "https://flow-eph-sp49v0.dev.stuart.com/oauth/callback"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -7600,7 +7598,7 @@
         "saml.onetimeuse.condition": "false"
       },
       "authenticationFlowBindingOverrides": {
-        "browser": "e0c1c019-ee8a-4015-8eb4-3032468ee181"
+        "browser": "cb587590-17dd-43a8-944f-7a2aed1ed0aa"
       },
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
@@ -7617,6 +7615,21 @@
             "access.token.claim": "true",
             "claim.name": "clientHost",
             "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "0750ddc0-4a93-40a6-b544-deabb721e3ce",
+          "name": "srt:restrict_user_access",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-hardcoded-claim-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.value": "false",
+            "userinfo.token.claim": "false",
+            "id.token.claim": "false",
+            "access.token.claim": "false",
+            "claim.name": "srt:restrict_user_access",
+            "jsonType.label": "boolean"
           }
         },
         {
@@ -7801,7 +7814,7 @@
         "saml.onetimeuse.condition": "false"
       },
       "authenticationFlowBindingOverrides": {
-        "browser": "e0c1c019-ee8a-4015-8eb4-3032468ee181"
+        "browser": "cb587590-17dd-43a8-944f-7a2aed1ed0aa"
       },
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
@@ -8458,24 +8471,23 @@
       "secret": "**********",
       "redirectUris": [
         "https://flow.beta.stuart.com/oauth/callback/apps",
-        "https://flow-eph-wbxj7z.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-r4koi8.dev.stuart.com/oauth/callback/apps",
         "https://flow-eph-28ed5q.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-iklw2q.dev.stuart.com/oauth/callback/apps",
         "https://flow-eph-ylio0k.dev.stuart.com/oauth/callback/apps",
         "https://flow.stuart.com/oauth/callback/apps",
+        "https://flow-eph-02arp0.dev.stuart.com/oauth/callback/apps",
         "https://flow-eph-y7jwxv.dev.stuart.com/oauth/callback/apps",
         "http://localhost:3000/oauth/callback/apps",
-        "https://flow-eph-1maztj.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-rk1mbq.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-ttr4i0.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-n1nm7s.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-0kkypd.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-29p7xn.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-pudbn0.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-bp5jmd.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-sp49v0.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-659f1g.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-3u5tx4.dev.stuart.com/oauth/callback/apps",
         "http://127.0.0.1:9999/oauth/callback",
-        "https://flow-eph-hirui7.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-jinpl5.dev.stuart.com/oauth/callback/apps",
         "https://flow-eph-emzcoe.dev.stuart.com/oauth/callback/apps",
-        "https://flow-eph-mdanrp.dev.stuart.com/oauth/callback/apps"
+        "https://flow-eph-jinpl5.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-mdanrp.dev.stuart.com/oauth/callback/apps",
+        "https://flow-eph-rjoph6.dev.stuart.com/oauth/callback/apps"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -8505,7 +8517,7 @@
         "saml.onetimeuse.condition": "false"
       },
       "authenticationFlowBindingOverrides": {
-        "browser": "e0c1c019-ee8a-4015-8eb4-3032468ee181"
+        "browser": "cb587590-17dd-43a8-944f-7a2aed1ed0aa"
       },
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
@@ -9077,7 +9089,7 @@
           "protocolMapper": "oidc-hardcoded-claim-mapper",
           "consentRequired": false,
           "config": {
-            "claim.value": "[\"package\", \"packageSearch\", \"deleteSavedSearches\",\"updatePackageReference\",\"createWebhook\",\"deleteWebhook\",\"updateAltDropoffLocation\", \"packages\"]",
+            "claim.value": "[\"package\", \"packageSearch\", \"deleteSavedSearches\",\"updatePackageReference\",\"createWebhook\",\"deleteWebhook\",\"updateAltDropoffLocation\", \"packages\", \"schedulePackage\"]",
             "userinfo.token.claim": "false",
             "id.token.claim": "false",
             "access.token.claim": "true",
@@ -9164,8 +9176,8 @@
       "defaultClientScopes": [
         "web-origins",
         "role_list",
-        "profile",
         "roles",
+        "profile",
         "graphql",
         "email"
       ],
@@ -9261,6 +9273,21 @@
       "nodeReRegistrationTimeout": -1,
       "protocolMappers": [
         {
+          "id": "96350be1-e7bf-48cc-8a7b-5a561d5a46e7",
+          "name": "srt:mutations",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-hardcoded-claim-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.value": "[\"updateAltDropoffLocation\"]",
+            "userinfo.token.claim": "false",
+            "id.token.claim": "false",
+            "access.token.claim": "true",
+            "claim.name": "srt:mutations",
+            "jsonType.label": "JSON"
+          }
+        },
+        {
           "id": "22cb16eb-8537-4567-a537-c7ada6d587cf",
           "name": "Client ID",
           "protocol": "openid-connect",
@@ -9272,6 +9299,21 @@
             "access.token.claim": "true",
             "claim.name": "clientId",
             "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "9177864c-73f1-454e-8283-ea6dd6cfcf01",
+          "name": "srt:environments",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-hardcoded-claim-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.value": "[\"beta\", \"sandbox\", \"test\", \"qa\", \"production\", \"ephemeral\"]",
+            "userinfo.token.claim": "false",
+            "id.token.claim": "false",
+            "access.token.claim": "true",
+            "claim.name": "srt:environments",
+            "jsonType.label": "JSON"
           }
         },
         {
@@ -9309,7 +9351,7 @@
           "protocolMapper": "oidc-hardcoded-claim-mapper",
           "consentRequired": false,
           "config": {
-            "claim.value": "[\"whoami\"]",
+            "claim.value": "[\"whoami\", \"endCustomerPackage\"]",
             "userinfo.token.claim": "false",
             "id.token.claim": "false",
             "access.token.claim": "true",
@@ -9479,6 +9521,23 @@
             "id.token.claim": "false",
             "access.token.claim": "true",
             "claim.name": "srt:zone_codes",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "8845ace3-1926-4881-9705-9d79568ad36d",
+          "name": "allowed_application_ids",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "aggregate.attrs": "true",
+            "userinfo.token.claim": "false",
+            "multivalued": "true",
+            "user.attribute": "allowed_application_ids",
+            "id.token.claim": "false",
+            "access.token.claim": "true",
+            "claim.name": "srt:allowed_application_ids",
             "jsonType.label": "String"
           }
         },
@@ -10511,7 +10570,7 @@
       ]
     },
     {
-      "id": "e0c1c019-ee8a-4015-8eb4-3032468ee181",
+      "id": "cb587590-17dd-43a8-944f-7a2aed1ed0aa",
       "alias": "Browser With User Access Verification",
       "description": "browser based authentication",
       "providerId": "basic-flow",
