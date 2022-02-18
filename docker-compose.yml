@@ -23,7 +23,7 @@ services:
       - dev
 
   keycloak: &keycloak
-    image: quay.io/keycloak/keycloak:11.0.0
+    image: quay.io/keycloak/keycloak:16.1.1
     environment: &keycloak-enviroment
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
@@ -90,7 +90,7 @@ services:
     << : *keycloak
     profiles:
       - init
-    image: quay.io/keycloak/keycloak:11.0.0
+    image: quay.io/keycloak/keycloak:16.1.1
     environment:
       << : *keycloak-enviroment
       KEYCLOAK_IMPORT: "/init_config/.current/realm-export-full.json"
