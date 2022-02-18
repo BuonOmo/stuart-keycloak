@@ -1,4 +1,4 @@
-IMPORT_VERSION:=20200216_9.0.0
+IMPORT_VERSION:=20200218_11.0.0
 IMPORT_DIR:=init_config/.current
 
 status:
@@ -50,7 +50,7 @@ clean-import-files:
 	rm -rf ${IMPORT_DIR}
 
 launch-init:
-	docker-compose up -d keycloak-init
+	docker-compose up keycloak-init
 
 stop-init:
 	docker-compose stop keycloak-init
